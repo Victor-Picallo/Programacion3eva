@@ -5,11 +5,11 @@ import java.util.Vector;
 
 public class ListaEmpleados {
 
-    public Vector<Empleado> lista;
+    public ArrayList<Empleado> lista;
     public double totalNomina = 0;
 
     public ListaEmpleados() {
-        lista = new Vector<Empleado>();
+        lista = new ArrayList<>();
     }
 
     public void agregarEmpleado(Empleado a) {
@@ -24,10 +24,11 @@ public class ListaEmpleados {
         return totalNomina;
     }
 
+    //Usamos un modelo de array estatico bidimensional
     public String[][] obtenerMatriz() {
         String datos[][] = new String[lista.size()][3];
         for (int i = 0; i < lista.size(); i++) {
-            Empleado e = lista.elementAt(i);
+            Empleado e = lista.get(i);
             datos[i][0] = e.getNombre();
             datos[i][1] = e.getApellidos();
             datos[i][2] = Double.toString(e.calcularNomina());
@@ -38,7 +39,7 @@ public class ListaEmpleados {
     public String convertirTexto() {
         String texto = "";
         for (int i = 0; i < lista.size(); i++) {
-            Empleado e = lista.elementAt(i);
+            Empleado e = (Empleado) lista.get(i);
             texto += "Nombre = " + e.getNombre() + "\n" +
                     "Apellidos = " + e.getApellidos() + "\n" +
                     "Cargo = " + e.getCargo() + "\n" +
