@@ -76,7 +76,7 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
             int respuesta = fc.showOpenDialog(this);
             if (respuesta == JFileChooser.APPROVE_OPTION) {
                 File directorioElegido = fc.getSelectedFile();
-                String nombre = directorioElegido.getName();
+                String nombre = directorioElegido.toString();
                 try {
                     String contenido = empleados.convertirTexto();
                     // Corregir ruta usando el directorio seleccionado

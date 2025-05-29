@@ -1,0 +1,11 @@
+Nombre = Victor
+Apellidos = Picallo
+Cargo = DIRECTIVO
+Genero = MASCULINO
+Salario = $1350.0
+Dias trabajados = 1
+Otros ingresos = $1.0
+Pagos salud = $1.0
+Aportes pensiones = $1.0
+---------
+Total nomina = $2698,00

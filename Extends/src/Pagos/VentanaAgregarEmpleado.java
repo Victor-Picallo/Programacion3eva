@@ -135,7 +135,7 @@ public class VentanaAgregarEmpleado extends JFrame implements ActionListener {
         campoNombre.setText("");
         campoApellidos.setText("");
         campoSalarioDia.setText("");
-        campoNumeroDias.setValue(0);
+        campoNumeroDias.setValue(30);
         campoOtrosIngresos.setText("");
         campoAportesSalud.setText("");
         campoPensiones.setText("");

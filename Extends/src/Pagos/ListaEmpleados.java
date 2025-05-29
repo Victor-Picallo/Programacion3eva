@@ -28,10 +28,11 @@ public class ListaEmpleados {
     public String[][] obtenerMatriz() {
         String datos[][] = new String[lista.size()][3];
         for (int i = 0; i < lista.size(); i++) {
-            Empleado e = lista.get(i);
+            Empleado e = (Empleado) lista.get(i);
             datos[i][0] = e.getNombre();
             datos[i][1] = e.getApellidos();
             datos[i][2] = Double.toString(e.calcularNomina());
+            totalNomina += e.calcularNomina();
         }
         return datos;
     }
